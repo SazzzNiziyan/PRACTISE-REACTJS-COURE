@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  font-family:Arial, sans-serif;
+  background: linear-gradient(145deg, #e6ebf2, #d1d9e6);
+  color: #000000;
+}
+
+.Section1 {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,30 @@
+h4 {
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+h4 > span {
+  font-size: 9px;
+  color: rgb(173, 173, 173);
+}
+
+h2 {
+  margin: 5px 0px;
+}
+
+p > span {
+  height: 10px;
+  width: 30px;
+  background-color: rgb(230, 230, 230);
+  padding: 4px 10px ;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+
+.line{
+    display: inline-block;
+    width: 300px;
+    margin-top: 100px;
+    border:1px solid rgb(230, 230, 230);
+}

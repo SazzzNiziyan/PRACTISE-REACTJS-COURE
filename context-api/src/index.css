@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root{
+    color: aliceblue;
+
+}
+
+.Navbar{
+    height: 70px;
+    padding: 18px;
+}
+
+.Navbar.light{
+    background-color: rgb(22, 146, 146);
+}
+
+
+.Navbar.dark{
+    background-color:rgb(5,51,69);
+}
+
+.Main.light{
+    background-color: rgb(164, 143, 126);
+    color:#660000;
+    text-shadow: 2px 4px 6px rgb(60, 60, 60);
+}
+
+.button.dark{
+    background-color:rgb(5,51,69);
+    color: rgb(255, 255, 255);
+}
+
+.button.light{
+    background-color:rgb(22, 146, 146);
+    color:rgb(132, 9, 9);
+}
+
+.Main.dark{
+    background-color: rgb(0, 0, 0);
+    color:whitesmoke;
+}
+
+.First{
+    color: rgb(255, 255, 255);
+    background-color: brown;
+    height: 90px;
+    font-size: 30px;
+    width: 90px;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-family: 'Alfa slab one Regular';
+    text-transform: uppercase;
+    margin: -7px 0 0 -9px;
+}

@@ -1,0 +1,18 @@
+.bttm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.p{
+    font-size: 12px;
+    color: rgb(165, 165, 165);
+}
+
+.btn{
+    padding:5px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root{
+    font-family: helveticaNeue;
+    --font-heading:"Family Guy";
+    .scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+}
