@@ -186,8 +186,8 @@ const App = () => {
 
   return (
     <div className='Section1'>
-      {positioninfo.map(function(data){
-         return <Card carData={data}/>
+      {positioninfo.map(function(data,idx){
+         return <Card key={idx} carData={data}/>
       })}
     </div>
   )
