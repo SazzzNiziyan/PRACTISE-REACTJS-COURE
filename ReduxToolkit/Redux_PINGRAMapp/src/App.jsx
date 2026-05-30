@@ -2,12 +2,8 @@ import React from 'react'
 import { GIF, Image, Video } from './API/mediaApi'
 
 const App = () => {
-
-
-
-
   return (
-    <div>
+    <div className='bg-black min-h-screen'>
       <button onClick={async () => {
         const data = await Image("cat");
         console.log(data.results)
