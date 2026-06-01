@@ -1,8 +1,11 @@
 import React from 'react'
 
-const ResultCard = () => {
+const ResultCard = ({item}) => {
   return (
-    <div>ResultCard</div>
+    <div>
+      <img
+      className='h-60 w-60 bg-cover' src={item.src} alt="" />
+    </div>
   )
 }
 

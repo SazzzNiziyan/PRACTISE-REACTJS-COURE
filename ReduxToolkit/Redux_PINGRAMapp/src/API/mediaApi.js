@@ -27,3 +27,5 @@ export async function GIF(query,page=1,per_page=20){
     })
    return res.data.data
 }
+
+

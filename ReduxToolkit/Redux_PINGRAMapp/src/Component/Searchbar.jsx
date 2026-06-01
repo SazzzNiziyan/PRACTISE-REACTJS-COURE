@@ -15,12 +15,12 @@ const Searchbar = () => {
   }
 
   return (
-    <div className='w-full'>
+    <div className='w-full border-14 border-(--c3)'>
       <form onSubmit={(e) => {
         submitHandler(e)
       }}>
         <input
-          className=' w-[90%] text-3xl p-5 text-black bg-(--c5) rounded'
+          className='active:border-0 w-[90%] outline-0 text-3xl text-(--c1) p-5 uppercase bg-(--c5)'
           type="text"
           value={text}
           onChange={(e) => {
@@ -31,8 +31,8 @@ const Searchbar = () => {
         />
 
         <button
-          className='bg-(--c4) text-3xl w-[10%] p-5 text-black rounded'
-        >click me</button>
+          className='bg-(--c4) text-3xl w-[10%] p-5 text-black'
+        >Touch Me</button>
       </form>
     </div>
   )
