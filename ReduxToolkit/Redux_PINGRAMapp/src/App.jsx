@@ -1,23 +1,26 @@
 import React from 'react'
 import { GIF, Image, Video } from './API/mediaApi'
+import Searchbar from './Component/Searchbar';
 
 const App = () => {
   return (
-    <div className='bg-black min-h-screen'>
+    <div className=' bg-white min-h-screen'>
+      <Searchbar />
       <button onClick={async () => {
         const data = await Image("cat");
         console.log(data.results)
-      }} className='h-40 w-80 text-5xl bg-red-500 m-10 active:scale-95 transition'>Press Me</button>
+      }} className='h-20 w-50 text-2xl bg-red-500 rounded p-2 m-10 active:scale-95 transition'>Press Me</button>
 
       <button onClick={async () => {
         const data = await Video("cat");
         console.log(data.videos)
-      }} className='h-40 w-80 text-5xl bg-red-500 m-10 active:scale-95 transition'>Press Me</button>
+      }} className='h-20 w-50 text-2xl bg-red-500 rounded p-2 m-10 active:scale-95 transition'>Press Me</button>
 
       <button onClick={async () => {
         const data = await GIF("cat");
         console.log(data.data)
-      }} className='h-40 w-80 text-5xl bg-red-500 m-10 active:scale-95 transition'>Press Me</button>
+      }} className='h-20 w-50 text-2xl bg-red-500 rounded p-2 m-10 active:scale-95 transition'>Press Me</button>
+
 
     </div>
   )
