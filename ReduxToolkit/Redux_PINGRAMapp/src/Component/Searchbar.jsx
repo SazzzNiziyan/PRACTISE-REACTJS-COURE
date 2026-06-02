@@ -10,8 +10,7 @@ const Searchbar = () => {
   var dispatch = useDispatch()
   var submitHandler = (e) => {
     e.preventDefault()
-    dispatch(setQuery(text))
-    setText('') 
+    dispatch(setQuery(text)) 
   }
 
   return (
@@ -20,7 +19,7 @@ const Searchbar = () => {
         submitHandler(e)
       }}>
         <input
-          className='active:border-0 w-[90%] outline-0 text-3xl text-(--c1) p-5 uppercase bg-(--c5)'
+          className='w-[90%] outline-0 text-3xl text-(--c1) p-5 uppercase bg-(--c5)'
           type="text"
           value={text}
           onChange={(e) => {

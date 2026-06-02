@@ -1,37 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-var initial = {
-    query: "",
-    activeTabs: "photos",
-    results: [],
-    loading: false,
-    error: null
-}
+var initial ={
+        query: "",
+        activeTabs: "photos",
+        results: [],
+        loading: false,
+        error: null
+    }
 
 var searchSlice = createSlice({
     name: "search",
     initialState: initial,
     reducers: {
-        setQuery(state,action){
-            state.query=action.payload 
+        setQuery(state, action) {
+            state.query = action.payload
         },
-        setActiveTabs(state,action){
-            state.activeTabs=action.payload 
+        setActiveTabs(state, action) {
+            state.activeTabs = action.payload
         },
-        setResults(state,action){
-            state.results=action.payload 
-            state.loadings=false
+        setResults(state, action) {
+            state.results = action.payload
+            state.loading = false
         },
-        setLoadings(state,action){
-            state.loading=action.payload 
-            state.error=null
+        setLoadings(state) {
+            state.loading = true
+            state.error = null
         },
-        setError(state,action){
-            state.error=action.payload 
-            state.loadings=false
+        setError(state, action) {
+            state.error = action.payload
+            state.loadings = false
         },
-        ClearResult(state){
-            state.result=[]
+        ClearResult(state) {
+            state.result = []
         }
     }
 })

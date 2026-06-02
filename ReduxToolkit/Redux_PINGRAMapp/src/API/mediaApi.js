@@ -21,9 +21,9 @@ export async function Video(query,page=1,per_page=20){
    return res.data
 }
 
-export async function GIF(query,page=1,per_page=20){
+export async function GIF(q,page=1,per_page=20){
     var res = await axios.get(`https://api.klipy.com/api/v1/${GIFApi}/gifs/search`,{
-        params:{query, page, per_page},
+        params:{q, page, per_page},
     })
    return res.data.data
 }
