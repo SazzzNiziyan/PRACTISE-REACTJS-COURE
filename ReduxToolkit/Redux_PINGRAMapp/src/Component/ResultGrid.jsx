@@ -4,6 +4,7 @@ import { GIF, Image, Video } from '../API/mediaApi'
 import { setError, setLoadings, setResults } from '../redux/features/SearchSlice'
 import ResultCard from './ResultCard';
 
+
 const ResultGrid = () => {
   const dispatch = useDispatch()
   const { query, activeTabs, results, loading, error } = useSelector((store) => store.search)
@@ -16,13 +17,12 @@ const ResultGrid = () => {
         let data = [];
         if (activeTabs == 'photos') {
           let response = await Image(query);
-          // console.log(response)
           data = response.results.map((item) => ({
             id: item.id,
             type: 'photo',
             title: item.alt_description,
             thumbnail: item.urls.small,
-            src: item.urls.full,
+            src: item.urls.small,
             url:item.links.html
           }));
         }
@@ -44,7 +44,7 @@ const ResultGrid = () => {
             title: item.title || 'GIF',
             type: 'gif',
             thumbnail: item.file.xs.gif.url,
-            src: item.file.hd.gif.url,
+            src: item.file.sm.gif.url,
             url: `https://klipy.com/gifs/${item.slug}`
           }));
         }

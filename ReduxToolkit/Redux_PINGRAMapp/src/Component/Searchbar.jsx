@@ -17,6 +17,7 @@ const Searchbar = () => {
     <div className='w-full border-14 border-(--c3)'>
       <form onSubmit={(e) => {
         submitHandler(e)
+        
       }}>
         <input
           className='w-[90%] outline-0 text-3xl text-(--c1) p-5 uppercase bg-(--c5)'
