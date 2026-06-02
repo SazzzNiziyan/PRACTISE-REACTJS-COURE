@@ -10,6 +10,7 @@ export async function Image(query,page=1,per_page=24){
         params:{query,page,per_page},
         headers:{Authorization:`Client-ID ${ImageApi}`}
     })
+    
    return res.data
 }
 
@@ -21,7 +22,7 @@ export async function Video(query,page=1,per_page=24){
    return res.data
 }
 
-export async function GIF(q,page=1,per_page=24){
+export async function GIF(q,page,per_page=24){
     var res = await axios.get(`https://api.klipy.com/api/v1/${GIFApi}/gifs/search`,{
         params:{q, page, per_page},
     })
