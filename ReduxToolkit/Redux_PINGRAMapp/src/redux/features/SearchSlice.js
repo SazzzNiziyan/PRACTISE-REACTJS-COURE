@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initial ={
-        query: "",
-        activeTabs: "photos",
-        results: [],
-        loading: false,
-        error: null
-    }
+const initial = {
+    query: "",
+    page: 1,
+    activeTabs: "photos",
+    results: [],
+    loading: false,
+    error: null
+}
 
 const searchSlice = createSlice({
     name: "search",
@@ -15,6 +16,9 @@ const searchSlice = createSlice({
         setQuery(state, action) {
             state.query = action.payload
         },
+        setPage(state, action) {
+            state.page = action.payload
+        },
         setActiveTabs(state, action) {
             state.activeTabs = action.payload
         },
@@ -22,13 +26,17 @@ const searchSlice = createSlice({
             state.results = action.payload
             state.loading = false
         },
+        appendResults: (state, action) => {
+            state.results = [...state.results, ...action.payload];
+            state.loading = false;
+        },
         setLoadings(state) {
             state.loading = true
             state.error = null
         },
         setError(state, action) {
             state.error = action.payload
-            state.loadings = false
+            state.loading = false
         },
 
     }
@@ -40,7 +48,9 @@ export const {
     setLoadings,
     setError,
     setResults,
-    ClearResult
+    ClearResult,
+    setPage,
+    appendResults
 } = searchSlice.actions
 
 export default searchSlice.reducer

@@ -1,23 +1,26 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { setQuery } from '../redux/features/SearchSlice'
+import { setQuery, setPage, setResults } from '../redux/features/SearchSlice'
 
 const Searchbar = () => {
 
 
   const [text, setText] = useState('')
 
+
   var dispatch = useDispatch()
   var submitHandler = (e) => {
     e.preventDefault()
-    dispatch(setQuery(text)) 
+    dispatch(setPage(1));
+    dispatch(setResults([]));
+    dispatch(setQuery(text))
   }
 
   return (
     <div className='w-full border-14 border-(--c3)'>
       <form onSubmit={(e) => {
         submitHandler(e)
-        
+
       }}>
         <input
           className='w-[90%] outline-0 text-3xl text-(--c1) p-5 uppercase bg-(--c5)'

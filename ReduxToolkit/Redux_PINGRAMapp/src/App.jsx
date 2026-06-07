@@ -7,7 +7,7 @@ import { ToastContainer} from "react-toastify";
 
 const App = () => {
   return (
-    <div className='bg-(--c5) select-none bg-blend-overlay  min-h-screen '>
+    <div className='bg-(--c5) select-none bg-blend-overlay min-h-screen '>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collectionpage />} />
