@@ -18,7 +18,6 @@ const ResultGrid = () => {
         let data = [];
         if (activeTabs === 'photos') {
           let response = await Image(query, page);
-          console.log(response);
           data = response.results.map((item) => ({
             id: item.id,
             type: 'photo',
