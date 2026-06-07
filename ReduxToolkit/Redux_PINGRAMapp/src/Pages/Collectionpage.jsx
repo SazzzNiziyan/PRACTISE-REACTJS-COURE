@@ -20,12 +20,12 @@ const Collectionpage = () => {
     }
 
     return (
-        <div className='relative'>
+        <div className='relative pb-3'>
             <Navbar />
             <CollectionNav />
             {collection.length !== 0 ? <div className='flex justify-between items-center p-4 '>
                 <h1 className='text-6xl text-(--c3)'>YOUR COLLECTION</h1>
-                <button className='px-16 text-(--c5) py-6 text-4xl bg-(--c2)' onClick={() => {
+                <button className='px-16 text-(--c5) py-6 text-4xl bg-(--c2) hover:bg-(--c1)' onClick={() => {
                     clearAll()
                 }}>clearAll</button>
                 </div>:  <h1 className='text-6xl p-4 text-(--c3)'>YOUR COLLECTION IS EMPTY JII!!!</h1> }

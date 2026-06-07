@@ -3,6 +3,7 @@ import { GIF, Image, Video } from './API/mediaApi'
 import Home from './Pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import Collectionpage from './Pages/Collectionpage';
+import { ToastContainer} from "react-toastify";
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collectionpage />} />
       </Routes>
+
+      <ToastContainer/>
     </div>
   )
 }

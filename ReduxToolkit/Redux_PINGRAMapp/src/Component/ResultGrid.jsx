@@ -5,6 +5,7 @@ import { setError, setLoadings, setResults } from '../redux/features/SearchSlice
 import ResultCard from './ResultCard';
 
 
+
 const ResultGrid = () => {
   const dispatch = useDispatch()
   const { query, activeTabs, results, loading, error } = useSelector((store) => store.search)
@@ -23,7 +24,7 @@ const ResultGrid = () => {
             title: item.alt_description,
             thumbnail: item.urls.small,
             src: item.urls.small,
-            url:item.links.html
+            url: item.links.html
           }));
         }
         if (activeTabs == 'videos') {
@@ -65,8 +66,7 @@ const ResultGrid = () => {
 
 
   return (
-    <div className='flex flex-wrap gap-3 justify-center'>
-
+    <div className='flex flex-wrap pb-3 gap-3 justify-center'>
       {results.map((item, idx) => {
         return <ResultCard key={idx} item={item} />
       })}

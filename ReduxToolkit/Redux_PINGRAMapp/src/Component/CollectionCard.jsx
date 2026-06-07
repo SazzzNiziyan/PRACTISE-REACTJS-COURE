@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { removeCollection } from '../redux/features/CollectionSlice'
+import { removeCollection ,removeToast } from '../redux/features/CollectionSlice'
 
 const Collectioncard = ({item}) => {
 
@@ -20,7 +20,8 @@ const Collectioncard = ({item}) => {
       </a>
       <button onClick={()=>{
         removefromCollection(item)
-      }} className='absolute top-2 right-2 bg-(--c1) px-2 py-1 active:scale-95'>remove</button>
+        dispatch(removeToast())
+      }} className='absolute top-2 right-2 bg-(--c2) hover:bg-(--c1) text-(--c5) px-2 py-1 active:scale-95'>remove</button>
       <p className='absolute overflow-hidden top-0 left-0 right-4 bg-(--c3) w-14 px-2 py-1'>{item.type}</p>
       <p className='absolute h-14 overflow-hidden bottom-4 left-0 right-4 bg-(--c4)/70 px-2 py-1'>{item.title}</p>
     </div>
