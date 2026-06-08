@@ -1,13 +1,16 @@
-*{
-    scrollbar-width: none;
+* {
+  scrollbar-width: none;
+  cursor: url(/image2.png) 0 0 , auto;
 }
+
+
 @import "tailwindcss";
 
-:root{
-    --c1:#880d1e;
-    --c2:#dd2d4a;
-    --c3:#f26a8d;
-    --c4:#f49cbb;
-    --c5:#cbeef3;
-    font-family: fantasy;
+:root {
+  --c1: #880d1e;
+  --c2: #dd2d4a;
+  --c3: #f26a8d;
+  --c4: #f49cbb;
+  --c5: #cbeef3;
+  font-family: fantasy;
 }

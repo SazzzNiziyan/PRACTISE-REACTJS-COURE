@@ -82,7 +82,6 @@ const ResultGrid = () => {
       next={fetchMore}
       hasMore={hasMore}
       loader={loading ? <h1 className='text-2xl my-30 text-center text-(--c2)'>Loading...</h1> : null}
-      scrollableTarget="scrollableDiv"
     ><div className='flex flex-wrap pb-3 gap-3 justify-center'>
         {results.map((item) => {
           return <ResultCard key={item.id} item={item} />
